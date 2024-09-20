@@ -1,0 +1,130 @@
+ @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+ * {
+     padding: 0;
+     margin: 0;
+
+ }
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+ body {
+     background-color: #ffffff;
+     font-family: "Ubuntu", sans-serif;
+     font-weight: 300;
+     font-style: normal;
+     height: 100%;
+     width: 100%;
+ }
+
+ nav {
+     display: flex;
+     position: fixed;
+     font-family: "Ubuntu", sans-serif;
+     font-weight: 300;
+     font-style: normal;
+     height: 190px;
+     width: 100%;
+     background-color: #ffffff;
+     justify-content: center;
+
+     #logo {
+         font-weight: bold;
+     }
+
+     ul {
+         height: 70px;
+         margin-top: 20px;
+         justify-content: space-between;
+         width: 20%;
+
+         display: flex;
+
+         li {
+             transition: 1s;
+             height: 20px;
+             width: fit-content;
+             list-style: none;
+
+             .important {
+                 background-color: #2196F3;
+                 color: white;
+                 border-radius: 1px;
+
+                 &:hover {
+                     box-shadow: 1px 1px 0px black;
+                     color: white;
+                     text-shadow: 1px 1px 0 black;
+                 }
+             }
+
+
+             a {
+                 color: rgba(0, 0, 0, 0.397);
+                 text-decoration: none;
+                 font-weight: bold;
+                 color: rgb(22, 22, 22);
+                 font-size: 13px;
+                 transition: 0.7s;
+                 padding: 15px 20px;
+
+                 &:hover {
+
+                     color: rgba(0, 0, 0, 0.719);
+
+
+                 }
+             }
+         }
+     }
+ }
+
+ .containerLandingPage {
+     height: 100%;
+     background-color: white;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     .container {
+        position: absolute;
+        cursor: pointer;
+         height: 60%;
+         border-radius: 1px;
+         text-align: center;
+         padding: 30px 30px;
+         width: 30%;
+         transition: 0.8s;
+         border: 1px solid rgba(0, 0, 0, 0.041);
+        
+        
+        
+         text-align: center;
+         .imgcontainer{
+            padding: 30px 20px;
+            display: flex;
+            justify-content: center;
+            height: fit-content;
+            width: 100%;
+            .radius{
+                border-radius: 100%;
+                overflow: hidden;
+             
+
+            }
+         }
+         blue{
+            color: #2196F3;
+         }
+        
+         h4{
+             color: rgba(0, 0, 0, 0.829);
+             text-align: center;
+            
+         }
+     }
+
+    }
