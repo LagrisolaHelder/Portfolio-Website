@@ -103,7 +103,7 @@ nav ul li a:hover {
 .containerLandingPage .container blue {
   color: #2196F3;
 }
-.containerLandingPage .container h4 {
-  color: rgba(0, 0, 0, 0.829);
+.containerLandingPage .container h5 {
+  color: rgb(0, 0, 0);
   text-align: center;
 }/*# sourceMappingURL=style.css.map */
