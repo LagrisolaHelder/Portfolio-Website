@@ -1,2 +1,12 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+*{
+    font-family: 'Satoshi', sans-serif;
+}
