@@ -16,7 +16,7 @@ const Card = ({image,
     <h2 className="card-title">{title}</h2>
     <p>{description}</p>
     <div className="card-actions justify-end">
-      <button className="btn rounded-2xl bg-black text-white cursor-pointer ">Buy Now</button>
+      <button className="btn rounded-2xl bg-black text-white cursor-pointer ">Visit now </button>
     </div>
   </div>
 </div>
