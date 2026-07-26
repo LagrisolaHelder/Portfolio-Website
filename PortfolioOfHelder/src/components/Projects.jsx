@@ -2,80 +2,41 @@ import React from 'react';
  
 
 export default function Projects() {
-  const projects = [
-    {
-      title: 'openArchv',
-      description: 'Desktop archive decompression utility built with Tauri & Rust.',
-      image: '/projects/openarchv.png', // Replace with your image path
-      link: 'https://github.com/your-username/openarchv',
-    },
-    {
-      title: 'Archive Extractor',
-      description: 'Browser-based file extraction SaaS using React & Supabase.',
-      image: '/projects/extractor.png', // Replace with your image path
-      link: 'https://your-app-url.com',
-    },
-    {
-      title: '6ix7even Store',
-      description: 'Custom e-commerce experience and liquid templating.',
-      image: '/projects/storefront.png', // Replace with your image path
-      link: 'https://your-store-url.com',
-    },
-  ];
-
   return (
-    <section id="projects" className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="projects" className="py-24 bg-white text-slate-950 font-sans">
+      <div className="max-w-4xl mx-auto px-6 space-y-8">
         
-        {/* Section Header */}
-        <div className="mb-12">
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">
-            Selected Works
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950">
-            Featured Projects
-          </h2>
-        </div>
+        {/* Eyebrow Label */}
+        <span className="block text-xs font-bold uppercase tracking-widest text-slate-400">
+          Selected Works
+        </span>
 
-        {/* Square-ish Project Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-xs hover:shadow-md transition-shadow duration-200 flex flex-col justify-between"
+        {/* Big Bold Headline */}
+        <h2 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight leading-none">
+          Featured Projects
+        </h2>
+
+        {/* Minimal Placeholder Banner */}
+        <div className="pt-6">
+          <div className="p-8 sm:p-12 shadow-xs border border-gray-100 rounded-2xl flex flex-col items-start gap-3">
+            <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
+              Status • In Progress
+            </span>
+            <p className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">
+              Building & refining new software.
+            </p>
+            <p className="text-sm sm:text-base text-slate-500 font-medium max-w-lg">
+              Projects are currently being updated. Check back soon or visit my GitHub to see what I’m working on.
+            </p>
+            <a
+              href="https://github.com/your-username"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 px-6 py-3 bg-slate-950 hover:bg-slate-800 text-white font-medium text-xs tracking-wide rounded-full transition-colors inline-block"
             >
-              {/* Top Image Box */}
-              <div className="w-full aspect-4/3 bg-slate-100 overflow-hidden relative">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105"
-                />
-              </div>
-
-              {/* Bottom Details & Button */}
-              <div className="p-6 flex items-end justify-between gap-4">
-                <div className="space-y-1">
-                  <h3 className="text-xl font-bold text-slate-950 tracking-tight">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-slate-500 line-clamp-2">
-                    {project.description}
-                  </p>
-                </div>
-
-                {/* Minimal Black Pill Button */}
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="shrink-0 px-5 py-2.5 bg-slate-950 hover:bg-slate-800 text-white font-medium text-xs tracking-wide rounded-full transition-colors"
-                >
-                  Visit now
-                </a>
-              </div>
-            </div>
-          ))}
+              View GitHub ↗
+            </a>
+          </div>
         </div>
 
       </div>
