@@ -1,24 +1,49 @@
-import React from 'react';
- 
+import React, { useEffect, useState, useRef } from 'react';
 
 export default function Projects() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // Animate once
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const getItemClass = () => `
+    transition-all duration-1000 ease-out transform
+    ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
+  `;
+
   return (
-    <section id="projects" className="py-24 bg-white text-slate-950 font-sans">
+    <section ref={sectionRef} id="projects" className="py-24 bg-white text-slate-950 font-sans">
       <div className="max-w-4xl mx-auto px-6 space-y-8">
         
-        {/* Eyebrow Label */}
-        <span className="block text-xs font-bold uppercase tracking-widest text-slate-400">
-          Selected Works
-        </span>
-
-        {/* Big Bold Headline */}
-        <h2 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight leading-none">
-          Featured Projects
-        </h2>
+        {/* Eyebrow & Title */}
+        <div className={getItemClass()} style={{ transitionDelay: '100ms' }}>
+          <span className="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">
+            Selected Works
+          </span>
+          <h2 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight leading-none">
+            Featured Projects
+          </h2>
+        </div>
 
         {/* Minimal Placeholder Banner */}
-        <div className="pt-6">
-          <div className="p-8 sm:p-12 shadow-xs border border-gray-100 rounded-2xl flex flex-col items-start gap-3">
+        <div className={getItemClass()} style={{ transitionDelay: '250ms' }}>
+          <div className="p-8 sm:p-12 bg-slate-50 border border-slate-200/80 rounded-2xl flex flex-col items-start gap-3">
             <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
               Status • In Progress
             </span>
